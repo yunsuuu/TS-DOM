@@ -29,6 +29,20 @@ if(link instanceof HTMLAnchorElement){
   // HTMLAnchorElement 타입 - href, style, class 사용 가능 
   link.href = "https://kakao.com";
 }
-
 // <button> 태그면 HTMLButtonElement, <h1> 태그면 HTMLHeadingElement
-// <태그>마다 정해져있음
+
+// 실습1 - 버튼 클릭시 이미지 변경
+let btn = document.querySelector("#button");
+btn?.addEventListener("click", function(){
+  let img = document.querySelector("#img");
+  if(img instanceof HTMLImageElement){
+    img.src = "img/캐롤 (2).jpg"
+  }
+})
+
+let youtube = document.querySelectorAll(".naver");
+youtube.forEach((el) => {
+  if(el instanceof HTMLAnchorElement){
+    el.href = "https://www.youtube.com/";
+  }
+})

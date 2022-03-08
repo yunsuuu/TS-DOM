@@ -25,4 +25,17 @@ if (link instanceof HTMLAnchorElement) {
     link.href = "https://kakao.com";
 }
 // <button> 태그면 HTMLButtonElement, <h1> 태그면 HTMLHeadingElement
-// <태그>마다 정해져있음
+// 실습1 - 버튼 클릭시 이미지 변경
+var btn = document.querySelector("#button");
+btn === null || btn === void 0 ? void 0 : btn.addEventListener("click", function () {
+    var img = document.querySelector("#img");
+    if (img instanceof HTMLImageElement) {
+        img.src = "img/캐롤 (2).jpg";
+    }
+});
+var youtube = document.querySelectorAll(".naver");
+youtube.forEach(function (el) {
+    if (el instanceof HTMLAnchorElement) {
+        el.href = "https://www.youtube.com/";
+    }
+});
